@@ -69,7 +69,8 @@ if sb=="Univarate":
             fig=px.box(data_frame=df_eda,x="price")
             st.plotly_chart(fig)
         with col2:
-            st.write(df_eda["price"])
+            fig=px.histogram(data_frame=df_eda,x="price")
+            st.plotly_chart(fig)
         st.markdown("- note : we have outliers in price")
     
     if sb_uni=="positive or negative ratings":
